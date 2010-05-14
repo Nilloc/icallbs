@@ -26,5 +26,5 @@ Add your specs in <tt>spec</tt>; just require <tt>spec_helper.rb</tt> to pre-con
 
 == Spawning a site on heroku
 
-  Edit <tt>cp spawn.heroku.example.sh spawn.heroku.sh</tt>
-  Then run spawn.heroku.sh
+Edit <tt>cp spawn.heroku.example.sh spawn.heroku.sh</tt>
+Then run spawn.heroku.sh
