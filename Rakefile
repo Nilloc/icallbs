@@ -16,7 +16,7 @@ end
 namespace :db do
   desc 'Auto-migrate the database (destroys data)'
   task :migrate => :environment do
-    DataMapper.auto_migrate!
+    DataMapper.auto_migrate! :force=>true
   end
 
   desc 'Auto-upgrade the database (preserves data)'

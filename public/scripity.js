@@ -27,13 +27,16 @@
     '::selection{background:'+shitColor+'; color:#fff; text-shadow:none;}'+
     'a:link{-webkit-tap-highlight-color:'+shitColor+';}'+
     '#bs_options{margin:10px 0;}'+
-    '#bs_stats{paddin-top:30px;}'+
+    '#bs_message{paddin-top:30px;}'+
     '.bs_selection{background:#735928 url('+bg+'); color:#fadfac;}'+
   '</style>';
   
   var heading = '<h1>'+headings[Math.floor(Math.random()*headings.length)]+'</h1>';
   var options = '<div id="bs_options"><a id="whole_page">whole page</a> <a href="javascript:void(0);" id="select_shit">only some of it sucks</a> <a href="javascript:void(0);" id="nevermind">oh nevermind</a></div>';
-  var stats   = '<div id="bs_stats">A bunch of other people think this is BS too.</div>';
+  var working = '<div id="bs_message">Shoveling your entry, and you can wait to see who else called it, or fuck-off somewhere better.</div>';
+  // var success = 
+  // var fail = 
+  var stats   = 'A bunch of other people think this is BS too.';
   
   var title = document.getElementsByTagName('title')[0];
   var bullShitter = document.getElementById('bullshitter') || document.createElement('div');
