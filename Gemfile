@@ -8,3 +8,7 @@ gem 'dm-validations'
 gem 'dm-types'
 gem 'dm-aggregates'
 gem 'haml'
+
+group :production do
+  gem 'dm-postgres-adapter'
+end
