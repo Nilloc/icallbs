@@ -1,3 +1,9 @@
+require 'dm-core'
+require 'dm-types'
+require 'dm-timestamps'
+require 'dm-validations'
+require 'dm-aggregates'
+
 # example model file
 class Page
   include DataMapper::Resource

@@ -7,7 +7,7 @@
   var headings = ["Bullshit.", "You&rsquo;re fucking kidding.", "Seriously?", "Can you believe this?", "Boooooogus!", "*Phhhhhhhhhtttttt*", "As If!", "Yeah right&hellip;", "Oh Come On!", "Get the fuck out."];
   var colors = ['#c93', '#960', '#630'];
   var shitColor = colors[Math.floor(Math.random()*colors.length)];
-  var bg = baseURL+'/icbg.gif';
+  var bg = document.baseURL+'/icbg.gif';
   var styling = '<style type="text/css">#bullshitter{background:'+shitColor+'; color:#e6c78c; border-radius:8px; float:left;'+
     '-moz-box-shadow:0 2px 4px #300; -webkit-box-shadow:0 2px 5px #300; box-shadow:0 2px 4px #300; '+
     'padding:10px; position:fixed; text-align:center; text-shadow:0 -1px 0 #300;'+
@@ -32,7 +32,7 @@
   '</style>';
   
   var heading = '<h1>'+headings[Math.floor(Math.random()*headings.length)]+'</h1>';
-  var options = '<div id="bs_options"><a id="whole_page">whole page</a> <a href="javascript:void(0);" id="select_shit">only some of it sucks</a> <a href="javascript:void(0);" id="nevermind">oh nevermind</a></div>';
+  var options = '<div id="bs_options"><a id="whole_page" href="'+document.baseURL+'/flag">whole page</a> <a href="javascript:void(0);" id="select_shit">only some of it sucks</a> <a href="javascript:void(0);" id="nevermind">oh nevermind</a></div>';
   var working = '<div id="bs_message">Shoveling your entry, and you can wait to see who else called it, or fuck-off somewhere better.</div>';
   // var success = 
   // var fail = 
@@ -50,11 +50,19 @@
   document.getElementById('nevermind').addEventListener('click', dismissThisShit, true);
   
   function flagWholePage(evt){
-    alert("You flagged the whole damn "+title.innerHTML+" as bullshit.");
+    evt.preventDefault();
+    
+    // alert("You flagged the whole damn "+title.innerHTML+" as bullshit.");
+    var name = prompt("You wanna let people know who you are, or are you", "a. Pussy");
+    // then do an ajax request for a json with the results... see http://www.gittr.com/index.php/archive/rendering-json-from-sinatra/ for instructions
+    
     return false;
   }
   
   function flagSelection(evt){
+    
+    // TODO: loading screen for AJAX call: Just a second this shit takes time, Shit's taking forever. Wow this service is fucking slow. I hope Amazon hasn't shit the bed again. Hurry the fuck up!
+    
     var selection,txt;
     if (window.getSelection){
       selection = txt = window.getSelection();
@@ -85,6 +93,8 @@
       console.log(rangeObject); //.startContainer.parentNode.innerHTML += '<span style="color:red;">Begin BS:</span>');//.commonAncestorContainer = '<span style="color:red;">'+txt+'</span>');
       
       
+      // TODO: use better highlighter scheme, because it needs to be cross paragraph... Not sure if this will do it or not (highlight multiple terms will work for sure, but I'd rather use the phrase one)... http://www.nsftools.com/misc/SearchAndHighlight.htm
+      
       // now set the selection or get the location of the selected text
       // var nodes = parentObject.childNodes;
       // for(var i=0; i < nodes.length; i++ ){
@@ -93,6 +103,14 @@
     }
     return false;
   }
+  
+  function setCookie(c_name,value,exdays){
+    var exdate=new Date();
+    exdate.setDate(exdate.getDate() + exdays);
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString());
+    document.cookie=c_name + "=" + c_value;
+  }
+  
   // console.log(document.body.childNodes.length);
   
   function getRangeObject(selectionObject) {

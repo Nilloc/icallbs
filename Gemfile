@@ -2,12 +2,13 @@
 source "http://rubygems.org"
 
 gem 'sinatra'
-gem 'data_mapper'
+gem 'dm-core'
 gem 'dm-timestamps'
 gem 'dm-validations'
 gem 'dm-types'
 gem 'dm-aggregates'
 gem 'haml'
+gem 'linguistics'
 
 group :development do
   gem 'dm-sqlite-adapter'
