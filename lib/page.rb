@@ -4,7 +4,7 @@ class Page
 
   property :id,         Serial
   property :name,       String
-  property :address,    URI       # Need to make this unique
+  property :address,    String       # Need to make this unique
   property :created_by, String
   property :created_at, DateTime
   property :updated_at, DateTime
@@ -25,5 +25,5 @@ class Flag
   belongs_to :page
 end
 
-DataMapper.finalize
-# Datamapper::auto_migrate!
+# DataMapper.finalize
+# DataMapper.update

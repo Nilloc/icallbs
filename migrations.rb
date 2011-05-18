@@ -20,8 +20,8 @@ DataMapper::Model.raise_on_save_failure = true
 begin
 
 
-Page.create :address => 'http://paperclipped.com', :name => 'Collins Portfolio', :created_by => 'Anony', :created_at =>Date.now
-Flag.create :page_id => Page.last.id, :number => 1, :flagged_by => Page.last.created_by, :created_at =>Date.now
+# Page.create :address => 'http://paperclipped.com', :name => 'Collins Portfolio', :created_by => 'Anony', :created_at =>Date.now
+# Flag.create :page_id => Page.last.id, :number => 1, :flagged_by => Page.last.created_by, :created_at =>Date.now
 
 rescue
   puts 'something failed to save'

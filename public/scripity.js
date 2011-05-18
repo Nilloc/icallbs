@@ -2,9 +2,9 @@
 
 // This aggregates the stinkers
 (function(){
-  
-  var baseURL = 'http://localhost/freelance/icallbullshit/';
-  var headings = ["Bullshit.", "You&rsquo;re Kidding.", "Seriously?", "Can you believe this?", "Boooooogus!", "*Phhhhhhhhhtttttt*", "As If!", "Yeah right&hellip;", "Oh Come On!"];
+  var debugging = true;
+  // var baseURL = (debugging) ? 'http://localhost:9393/' : 'http://icallbs.heroku.com'; // This needs to be dynamically defined in the app...
+  var headings = ["Bullshit.", "You&rsquo;re fucking kidding.", "Seriously?", "Can you believe this?", "Boooooogus!", "*Phhhhhhhhhtttttt*", "As If!", "Yeah right&hellip;", "Oh Come On!", "Get the fuck out."];
   var colors = ['#c93', '#960', '#630'];
   var shitColor = colors[Math.floor(Math.random()*colors.length)];
   var bg = baseURL+'icbg.gif';
@@ -113,6 +113,13 @@
     bsScript.parentNode.removeChild(bsScript);
   }
   
+  
   // Debugging
-  console.log(title.innerHTML+" is Booooooooogus!");
+  function trace(){
+    if(console && console.log)
+      console.log(caller.callee.arguments);
+  }
+  
+
+  
 })();
