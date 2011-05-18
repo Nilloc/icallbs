@@ -7,7 +7,7 @@
   var headings = ["Bullshit.", "You&rsquo;re fucking kidding.", "Seriously?", "Can you believe this?", "Boooooogus!", "*Phhhhhhhhhtttttt*", "As If!", "Yeah right&hellip;", "Oh Come On!", "Get the fuck out."];
   var colors = ['#c93', '#960', '#630'];
   var shitColor = colors[Math.floor(Math.random()*colors.length)];
-  var bg = baseURL+'icbg.gif';
+  var bg = baseURL+'/icbg.gif';
   var styling = '<style type="text/css">#bullshitter{background:'+shitColor+'; color:#e6c78c; border-radius:8px; float:left;'+
     '-moz-box-shadow:0 2px 4px #300; -webkit-box-shadow:0 2px 5px #300; box-shadow:0 2px 4px #300; '+
     'padding:10px; position:fixed; text-align:center; text-shadow:0 -1px 0 #300;'+
