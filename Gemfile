@@ -3,6 +3,7 @@ source "http://rubygems.org"
 
 gem 'sinatra'
 gem 'dm-core'
+gem 'dm-migrations'
 gem 'dm-timestamps'
 gem 'dm-validations'
 gem 'dm-types'

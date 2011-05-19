@@ -14,7 +14,7 @@ require 'dm-migrations'
 DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3:///#{File.expand_path(File.dirname(__FILE__))}/development.db")
 DataMapper::Logger.new($stdout, :debug)
 
-DataMapper.auto_migrate! #Destroy Destroy!
+DataMapper.auto_upgrade! #Destroy Destroy!
 # DataMapper.auto_upgrade! #Don't Destroy.
 DataMapper::Model.raise_on_save_failure = true
 begin
