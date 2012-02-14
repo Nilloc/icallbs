@@ -5,6 +5,6 @@ gem 'sinatra'
 gem "json"
 gem "couchrest"
 gem 'couchrest_model'
-gem "oa-oauth"
+gem "oa-oauth", "~> 0.3.2"
 gem "haml", "~> 3.1.4"
 gem "linguistics", "~> 1.0.9"
