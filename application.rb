@@ -8,6 +8,8 @@ require 'linguistics'
 
 # Configure the CouchDB using the cloudant config
 # For more info, check http://addons.heroku.com/cloudant
+# set :cloudant_url, ENV['CLOUDANT_URL'] || 'http://localhost:5984'
+
 $COUCH = CouchRest.new ENV["CLOUDANT_URL"]
 $COUCH.default_database = "omniauth-for-sinatra"
 
@@ -53,7 +55,7 @@ get '/' do
     # The following line just tests to see that it's working.
     #   If you've logged in your first user, '/' should load: "1 ... 1";
     #   You can then remove the following line, start using view templates, etc.
-    "Hello, #{current_user.nickname}"
+    "Hello, #{current_user.nickname} <img href=#{current_user.profile_image} />"
   else
     '<a href="/sign_up">create an account</a> or <a href="/auth/twitter">sign in with Twitter</a>'
     # if you replace the above line with the following line, 
