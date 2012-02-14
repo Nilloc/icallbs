@@ -1,10 +1,14 @@
-%h1 Call it what you see, Bullshit
+%h1 Welcome,
+  = @user..nickname
+  %img{:src=> @user.profile_image}
+  
+%h2 Your Bullshit (well other peoples' that you've called them on...)
 
+
+%h2 About
 %p This was inspired by all the tweets (and more recently the re-discovery of reddit posts, which I pretty much serves much the same purpose) that I see go by that are calling out dumb behavior, false information, and general trollery. Now there will be a central suppository for calling out these falsehoods and lamery. Eventually we will save IDs and have a discussion about these claims but initially, I just want a count of how bullshit something is. 
 %p And yes I expect it to be wildly abused.
 
 %h2 I'm lazy so you need <a href="/auth/twitter">sign in with Twitter</a> while this is in beta.
 
 %p Drag this link to your bookmarks &#x2192; <a href="javascript:document.baseURL='http://#{ENV["URL"] || "localhost:9393"}';var%20d=new%20Date().getTime();var%20os=document.getElementById('bs_script');if(os){os.parentNode.removeChild(os);}var%20s=document.createElement('script');s.type='text/javascript';s.id='bs_script';document.body.appendChild(s);s.src='http://#{ENV["URL"] || "localhost:9393"}/scripity.js?'+d;void(0);" title="BullSh*t">BullSh*t</a> &#x2190; <!--&#x238B;--> and click it whenever you come across bullshit online.
-
-%p Extensions for Chrome, Safari and maybe Firefox might be coming soon. If there is interest.

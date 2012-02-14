@@ -52,16 +52,11 @@ end
 
 get '/' do
   if current_user
-    # The following line just tests to see that it's working.
-    #   If you've logged in your first user, '/' should load: "1 ... 1";
-    #   You can then remove the following line, start using view templates, etc.
-    "Hello, #{current_user.nickname} <img href=#{current_user.profile_image} />"
+    @user = current_user
+    haml :home
   else
-    '<a href="/sign_up">create an account</a> or <a href="/auth/twitter">sign in with Twitter</a>'
-    # if you replace the above line with the following line, 
-    #   the user gets signed in automatically. Could be useful. 
-    #   Could also break user expectations.
-    # redirect '/auth/twitter'
+    # sign up/in page.
+    haml :root
   end
 end
 
