@@ -63,5 +63,5 @@ DEPENDENCIES
   haml (~> 3.1.4)
   json
   linguistics (~> 1.0.9)
-  oa-oauth
+  oa-oauth (~> 0.3.2)
   sinatra
