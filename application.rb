@@ -1,31 +1,7 @@
 require 'rubygems'
 require 'sinatra'
-require 'couchrest'
-require 'couchrest_model'
-require 'oa-oauth'
 require 'environment'
 require 'linguistics'
-
-# Configure the CouchDB using the cloudant config
-# For more info, check http://addons.heroku.com/cloudant
-# set :cloudant_url, ENV['CLOUDANT_URL'] || 'http://localhost:5984'
-
-$COUCH = CouchRest.new ENV["CLOUDANT_URL"]
-$COUCH.default_database = "omniauth-for-sinatra"
-
-class User < CouchRest::Model::Base
-  use_database $COUCH.default_database
-
-  property :uid
-  property :name
-  property :nickname
-  property :profile_image
-  timestamps!
-  
-  design do 
-    view :by_uid
-  end
-end
 
 configure do
   set :views, "#{File.dirname(__FILE__)}/views"
@@ -36,11 +12,6 @@ error do
   Kernel.puts e.backtrace.join("\n")
   'Application error'
 end
-
-# You'll need to customize the following line. Replace the CONSUMER_KEY 
-#   and CONSUMER_SECRET with the values you got from Twitter 
-#   (https://dev.twitter.com/apps/new).
-use OmniAuth::Strategies::Twitter, ENV['TWITTER_CONSUMER_KEY'], ENV['TWITTER_CONSUMER_SECRET']
 
 enable :sessions
 
