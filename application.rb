@@ -51,6 +51,8 @@ helpers do
 end
 
 get '/' do
+  @users = User.all;
+  
   if current_user
     @user = current_user
     haml :home
