@@ -1,3 +1,10 @@
+# Configure the CouchDB using the cloudant config
+#   or if you have a local server and don't want to mess with heroku yet, leave this alone.
+# For more info, check http://addons.heroku.com/cloudant
 COUCH_URL: 'http://127.0.0.1:5984'
+
+# You'll need to customize the following line. Replace the CONSUMER_KEY 
+#   and CONSUMER_SECRET with the values you got from Twitter 
+#   (https://dev.twitter.com/apps/new).
 TWITTER_CONSUMER_KEY: 'xxxxxxxxxxxxxxxxx'
 TWITTER_CONSUMER_SECRET: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
