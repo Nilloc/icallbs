@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'sinatra'
-require 'environment'
 require 'linguistics'
+require './environment'
 
 configure do
   set :views, "#{File.dirname(__FILE__)}/views"
