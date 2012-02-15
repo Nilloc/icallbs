@@ -1,5 +1,6 @@
 # Configure the CouchDB using the cloudant config
-#   or if you have a local server and don't want to mess with heroku yet, leave this alone.
+#   or if you have a local server and don't want to mess
+#   with heroku yet, leave this alone.
 # For more info, check http://addons.heroku.com/cloudant
 COUCH_URL: 'http://127.0.0.1:5984'
 
@@ -8,3 +9,8 @@ COUCH_URL: 'http://127.0.0.1:5984'
 #   (https://dev.twitter.com/apps/new).
 TWITTER_CONSUMER_KEY: 'xxxxxxxxxxxxxxxxx'
 TWITTER_CONSUMER_SECRET: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+
+# If you've already set up Heroku with these config settings
+#   running '$ heroku config --app your_app_name' will print
+#   out the settings needed for this.
+# See https://github.com/Nilloc/omniauth-for-sinatra-couchdb to get oauth setup on heroku.
