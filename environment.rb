@@ -13,7 +13,7 @@ configure do
   SiteConfig = OpenStruct.new(
                  :title => 'I Call BS',
                  :author => 'Collin Reisdorf',
-                 :url_base => 'http://localhost:9393/'
+                 :url_base => 'http://icallbs.heroku.com/'
                )
 
   # DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3:///#{File.expand_path(File.dirname(__FILE__))}/#{Sinatra::Base.environment}.db")

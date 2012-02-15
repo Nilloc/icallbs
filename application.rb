@@ -44,6 +44,8 @@ use OmniAuth::Strategies::Twitter, ENV['TWITTER_CONSUMER_KEY'], ENV['TWITTER_CON
 
 enable :sessions
 
+helpers Sinatra::Partials
+
 helpers do
   def current_user
     @current_user ||= User.get(session[:user_id]) if session[:user_id]
