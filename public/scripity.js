@@ -4,7 +4,9 @@
 (function(){
   var debugging = true;
   // var baseURL = (debugging) ? 'http://localhost:9393/' : 'http://icallbs.heroku.com'; // This needs to be dynamically defined in the app...
-  var headings = ["Bullshit.", "You&rsquo;re fucking kidding.", "Seriously?", "Can you believe this?", "Boooooogus!", "*Phhhhhhhhhtttttt*", "As If!", "Yeah right&hellip;", "Oh Come On!", "Get the fuck out."];
+  var headings = ["Bullshit.", "You&rsquo;re fucking kidding.", "Seriously?", "Can you believe this?", "Boooooogus!", "*Phhhhhhhhhtttttt*", /*"As If!", "Yeah right&hellip;", "Oh Come On!",*/ "Get the fuck out."];
+  
+  // TODO: normalize the colors (no more random, it's pointless and hurts the brand)
   var colors = ['#c93', '#960', '#630'];
   var shitColor = colors[Math.floor(Math.random()*colors.length)];
   var bg = document.baseURL+'/icbg.gif';
