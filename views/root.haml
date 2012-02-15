@@ -1,8 +1,8 @@
 %h2 Call it what you see, Bullshit
 
 -if @users
-  = render :user_list, :users => @users
+  = partial :user_list, :users => @users
 
-= render :about
+= partial :about
 
 %h3 I'm lazy so you need <a href="/auth/twitter">sign in with Twitter</a> while this is in beta.

@@ -6,6 +6,6 @@
 %h3 Your Bullshit (well other peoples' that you've called them on...)
 
 -if @users
-  = render :user_list, :users => @users
+  = partial :user_list, :users => @users
 
-= render :about
+= partial :about
