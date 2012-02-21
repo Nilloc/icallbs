@@ -86,10 +86,10 @@
       var rangeObject = getRangeObject(selection);
     
       // rangeObject.text='<span style="color:red;">'+txt+'</span>';
-      rangeObject.startContainer.parentElement.innerHTML = '<span class="bs_selection">'+rangeObject.startContainer.parentElement.innerHTML
+      rangeObject.startContainer.parentElement.innerHTML = '<span class="bs_selection">'+rangeObject.startContainer.parentElement.innerHTML;
       rangeObject.endContainer.parentElement.innerHTML += '</span>';
       var selectionFlag = document.createElement('span');
-      selectionFlag.style="color:red;"
+      selectionFlag.style="color:red;";
       selectionFlag.text = "FUCK";
       rangeObject.insertNode(selectionFlag);
       console.log(rangeObject); //.startContainer.parentNode.innerHTML += '<span style="color:red;">Begin BS:</span>');//.commonAncestorContainer = '<span style="color:red;">'+txt+'</span>');

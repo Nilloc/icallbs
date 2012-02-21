@@ -18,7 +18,7 @@ configure do
   AppConfig = (ENV['CLOUDANT_URL']) ? nil : YAML::load( File.open( "#{File.dirname(__FILE__)}/config/application.yml" ) )
   
   # couch db connection
-  $COUCH = CouchRest.new( ENV['CLOUDANT_URL'] || AppConfig['COUCH_URL'] )
+  $COUCH = CouchRest.new( ENV['CLOUDANT_URL'] || AppConfig['CLOUDANT_URL'] )
   $COUCH.default_database = 'bullshit'
   
   # twitter api setup
